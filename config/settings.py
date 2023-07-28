@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'football_app',
 
     # packages
+    'config',
     'rest_framework',
-    'rest_framework_simplejwt', 
+    'rest_framework_simplejwt',
     'drf_yasg',
 
     'django.contrib.admin',
