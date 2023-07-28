@@ -37,8 +37,9 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 INSTALLED_APPS = [
     #local
     'user',
+    'football_app',
 
-    #third
+    # packages
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_yasg',
