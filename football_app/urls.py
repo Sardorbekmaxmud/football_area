@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import BronsView,DeleteBron,StadiumDetailUserView,StadiumBronUserView
+from .views import BronsView,DeleteBron,StadiumDetailUserView,StadiumBronUserView,AllStadiumView
 
 urlpatterns = [
     # owner api
@@ -9,4 +9,6 @@ urlpatterns = [
     # user api
     path('bron/',StadiumBronUserView.as_view()),
     path('<pk>/',StadiumDetailUserView.as_view()),
+
+    path('', AllStadiumView.as_view()),
 ]

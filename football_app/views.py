@@ -34,3 +34,8 @@ class StadiumBronUserView(generics.CreateAPIView):
     queryset = BronModel.objects.all()
     serializer_class = BronSerializer
     permission_classes = (IsAuthenticated,)
+
+class AllStadiumView(generics.ListAPIView):
+    queryset = StadiumModel.objects.all()
+    serializer_class = StadiumSerializer
+    # permission_classes = (IsAuthenticated, )
