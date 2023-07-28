@@ -1,8 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from football_app.models import StadiumModel
+from football_app.models import StadiumModel,BronModel
 from user.models import CustomUser
-
 
 # Register your models here.
 class CustomUserAdmin(UserAdmin):
@@ -24,6 +23,6 @@ class CustomUserAdmin(UserAdmin):
     search_fields = ("username",)
     ordering = ("username",)
 
-
 admin.site.register(CustomUser, CustomUserAdmin)
 admin.site.register(StadiumModel)
+admin.site.register(BronModel)

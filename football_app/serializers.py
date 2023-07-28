@@ -1,8 +1,12 @@
-from rest_framework import serializers
-from .models import StadiumModel
+from rest_framework.serializers import ModelSerializer
+from .models import StadiumModel,BronModel
 
-
-class StadiumSerializer(serializers.ModelSerializer):
+class StadiumSerializer(ModelSerializer):
     class Meta:
         model = StadiumModel
-        fields = ('name', 'address', 'contact', 'images', 'price', 'started_at', 'end_at', )
+        fields = '__all__'
+
+class BronSerializer(ModelSerializer):
+    class Meta:
+        model = BronModel
+        fields = '__all__'
